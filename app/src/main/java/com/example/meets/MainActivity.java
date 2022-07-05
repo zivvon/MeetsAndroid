@@ -5,62 +5,42 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.widget.FrameLayout;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
-    FrameLayout home_ly;
-    BottomNavigationView bottom_tab;
+    HomeFragment homeFragment;
+    CalendarFragment calendarFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        init(); //객체 정의
-        SettingListener(); //리스너 등록
+        homeFragment = new HomeFragment();
+        calendarFragment = new CalendarFragment();
 
-        //맨 처음 시작할 탭 설정
-        bottom_tab.setSelectedItemId(R.id.home);
-    }
+        getSupportFragmentManager().beginTransaction().replace(R.id.container, homeFragment).commit();
+        BottomNavigationView bottom_tab = findViewById(R.id.bottom_tab);
+        bottom_tab.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.tab_home:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.container, homeFragment).commit();
+                        return true;
 
-    private void init() {
-        home_ly = findViewById(R.id.home_ly);
-        bottom_tab = findViewById(R.id.bottom_tab);
-    }
+                    case R.id.tab_calendar:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.container, calendarFragment).commit();
+                        return true;
 
-    private void SettingListener() {
-        //선택 리스너 등록
-        bottom_tab.setOnNavigationItemSelectedListener(new TabSelectedListener());
-    }
-
-    class TabSelectedListener implements BottomNavigationView.OnNavigationItemSelectedListener {
-        @Override
-        public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-            switch (menuItem.getItemId()) {
-                case R.id.tab_home: {
-                    getSupportFragmentManager().beginTransaction()
-                            .replace(R.id.home_ly, new HomeFragment())
-                            .commit();
-                    return true;
+//                    case R.id.tab_mypage:
+//                        getSupportFragmentManager().beginTransaction().replace(R.id.container,fragment).commit();
+//                        return true;
                 }
-//                case R.id.tab_loading: {
-//                    getSupportFragmentManager().beginTransaction()
-//                            .replace(R.id.home_ly, new LoadingFragment())
-//                            .commit();
-//                    return true;
-//                }
-                case R.id.tab_calendar: {
-                    getSupportFragmentManager().beginTransaction()
-                            .replace(R.id.home_ly, new CalendarFragment())
-                            .commit();
-                    return true;
-                }
+                return false;
             }
-
-            return false;
-        }
+        });
     }
 }
