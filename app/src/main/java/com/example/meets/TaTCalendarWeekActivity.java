@@ -10,6 +10,8 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
+import static com.example.meets.R.layout.activity_week_calendar;
+
 /**
  * Created by kitte on 2016-12-29.
  */
@@ -23,7 +25,7 @@ public class TaTCalendarWeekActivity extends AppCompatActivity implements TaTCal
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_week_calendar);
+        setContentView(activity_week_calendar);
 
         viewPager = (ViewPager)findViewById(R.id.calendar_week_pager);
         taTCalendarWeekAdapter = new TaTCalendarWeekAdapter(getSupportFragmentManager());

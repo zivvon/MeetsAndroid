@@ -11,8 +11,6 @@ import android.view.ViewGroup;
 
 import androidx.viewpager.widget.ViewPager;
 
-import com.example.meets.R;
-
 import java.util.Calendar;
 
 /**
