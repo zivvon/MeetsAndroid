@@ -54,8 +54,9 @@ public class CalendarFragment extends Fragment implements CalendarAdapter.OnItem
 
         CalendarAdapter calendarAdapter = new CalendarAdapter(daysInMonth, this);
         RecyclerView.LayoutManager layoutManager = new GridLayoutManager(getActivity().getApplicationContext(), 7);
-        calendarRecyclerView.setLayoutManager(layoutManager);
         calendarRecyclerView.setAdapter(calendarAdapter);
+        calendarRecyclerView.setLayoutManager(layoutManager);
+
     }
 
     @RequiresApi(api = Build.VERSION_CODES.O)

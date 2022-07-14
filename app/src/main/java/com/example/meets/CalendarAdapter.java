@@ -1,6 +1,7 @@
 package com.example.meets;
 
 
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,12 +27,17 @@ public class CalendarAdapter extends RecyclerView.Adapter<CalendarViewHolder> {
         View view = inflater.inflate(R.layout.calendar_cell, parent, false);
         ViewGroup.LayoutParams layoutParams = view.getLayoutParams();
         layoutParams.height = (int) (parent.getHeight() * 0.16666666);
-        return new CalendarViewHolder(view, (OnItemListener)this);
+        return new CalendarViewHolder(view, (OnItemListener) this);
     }
 
     @Override
     public void onBindViewHolder(@NonNull CalendarViewHolder holder, int position) {
-        holder.dayOfMonth.setText(daysOfMonth.get(position));
+        String day = daysOfMonth.get(position);
+        holder.dayOfMonth.setText(day);
+
+        if(position == 0 || position % 7 == 0) {
+            holder.dayOfMonth.setTextColor(Color.RED);
+        }
     }
 
     @Override
