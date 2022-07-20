@@ -1,47 +1,72 @@
 package com.example.meets;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Bundle;
-import android.view.MenuItem;
-
-import com.google.android.material.bottomnavigation.BottomNavigationView;
+import android.view.View;
+import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    HomeFragment homeFragment;
-    CalendarFragment calendarFragment;
+    LinearLayout meetsView;
+    Button createMeets;
+
+    Button moveHome;
+    Button moveCal;
+    Button moveMypg;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        homeFragment = new HomeFragment();
-        calendarFragment = new CalendarFragment();
+        //하단탭 버튼 설정
+        moveHome = findViewById(R.id.homeBtn);
+        moveCal = findViewById(R.id.calBtn);
+        moveMypg = findViewById(R.id.myBtn);
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.container, homeFragment).commit();
-        BottomNavigationView bottom_tab = findViewById(R.id.bottom_tab);
-        bottom_tab.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+        //모임 생성
+        meetsView = findViewById(R.id.meetsView);
+        createMeets = findViewById(R.id.createMeets);
+
+        createMeets.setOnClickListener(new View.OnClickListener() {
             @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()) {
-                    case R.id.tab_home:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.container, homeFragment).commit();
-                        return true;
-
-                    case R.id.tab_calendar:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.container, calendarFragment).commit();
-                        return true;
-
-//                    case R.id.tab_mypage:
-//                        getSupportFragmentManager().beginTransaction().replace(R.id.container,fragment).commit();
-//                        return true;
-                }
-                return false;
+            public void onClick(View view) {
+                createMeets();
             }
         });
+    }
 
+    public void moveHome(View v){
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(intent);
+    }
+
+    public void moveCal(View v){
+        Intent intent = new Intent(getApplicationContext(), CalendarActivity.class);
+        startActivity(intent);
+    }
+
+    public void moveMypg(View v){
+        Intent intent = new Intent(getApplicationContext(), MypgActivity.class);
+        startActivity(intent);
+    }
+
+    private void createMeets(){
+        TextView textViewNm = new TextView(getApplicationContext());
+        textViewNm.setText("새로운 모임 추가");
+        textViewNm.setTextSize(12);
+        textViewNm.setTypeface(null, Typeface.BOLD);
+        textViewNm.setId(0);
+        LinearLayout.LayoutParams param = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT);
+        textViewNm.setLayoutParams(param);
+        textViewNm.setBackgroundColor(Color.rgb(255, 255, 255));
+        meetsView.addView(textViewNm);
     }
 }
