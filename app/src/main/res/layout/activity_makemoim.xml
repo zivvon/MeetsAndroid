@@ -12,6 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
         <Button
             android:layout_width="10dp"
             android:layout_height="wrap_content"
@@ -58,8 +59,8 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp">
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -125,9 +126,7 @@
                             android:text="호스트"
                             android:textColor="@color/gray_1"
                             android:textSize="13dp"/>
-            </LinearLayout>
-
-
+                    </LinearLayout>
                 </LinearLayout>
 
                 <LinearLayout
@@ -206,7 +205,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="TO DO"
-                    android:textSize="20dp"
+                    android:textSize="16dp"
                     android:textColor="@color/black"/>
 
                 <TextView
@@ -245,17 +244,45 @@
                         android:layout_height="wrap_content"
                         android:text="할 일4"/>
                 </LinearLayout>
+            </LinearLayout>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="35dp"/>
-
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp">
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:background="@drawable/edge">
+                    android:paddingBottom="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="날짜와 시간"
+                        android:textSize="16dp"
+                        android:textStyle="normal"
+                        android:textColor="@color/black"/>
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"/>
+
+                    <Button
+                        android:layout_width="55dp"
+                        android:layout_height="18dp"
+                        android:text="고정"
+                        android:textSize="14dp"
+                        android:background="@color/secondary"
+                        android:textColor="@color/white"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
                     <LinearLayout
                         android:layout_width="150dp"
@@ -263,41 +290,47 @@
                         android:background="@color/secondary"
                         android:orientation="vertical">
 
-                        <TextView
+                        <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="          날짜"
-                            android:textColor="@color/white"/>
+                            android:orientation="horizontal"
+                            android:paddingBottom="7dp">
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="7dp"/>
+                            <ImageButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="날짜"
+                                android:textSize="16dp"
+                                android:textColor="@color/white"/>
+                        </LinearLayout>
 
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal"
-                            android:paddingLeft="15dp">
+                            android:paddingBottom="7dp">
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="1" />
 
                             <Button
-                                android:layout_width="50dp"
-                                android:layout_height="30dp"
-                                android:text="고정"
-                                android:textColor="@color/black"
-                                android:background="@drawable/color_change"/>
-
-                            <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="   "/>
-
-                            <Button
-                                android:layout_width="50dp"
-                                android:layout_height="30dp"
-                                android:text="조율"
+                                android:text="오늘날짜"
                                 android:textColor="@color/black"
-                                android:background="@color/white"/>
+                                android:background="@color/white" />
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="1" />
+
                         </LinearLayout>
                     </LinearLayout>
 
@@ -310,32 +343,20 @@
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal">
+                            android:orientation="horizontal"
+                            android:paddingBottom="7dp">
+
+                            <ImageButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="          시간"
+                                android:text="시간"
+                                android:textSize="16dp"
                                 android:textColor="@color/black"/>
-
-                            <View
-                                android:layout_width="0dp"
-                                android:layout_height="0dp"
-                                android:layout_weight="1" />
-
-                            <Button
-                                android:layout_width="70dp"
-                                android:layout_height="15dp"
-                                android:text="조율 go!"
-                                android:textSize="13dp"
-                                android:background="@color/primary" />
                         </LinearLayout>
-
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="5dp"/>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -351,78 +372,6 @@
                     </LinearLayout>
                 </LinearLayout>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="15dp"/>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:paddingBottom="10dp">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="장소"/>
-
-                        <View
-                            android:layout_width="0dp"
-                            android:layout_height="0dp"
-                            android:layout_weight="1"/>
-
-                        <Button
-                            android:layout_width="50dp"
-                            android:layout_height="30dp"
-                            android:text="고정"
-                            android:textColor="@color/black"
-                            android:background="@drawable/color_change"/>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="   "/>
-
-                        <Button
-                            android:layout_width="50dp"
-                            android:layout_height="30dp"
-                            android:text="조율"
-                            android:textColor="@color/black"
-                            android:background="@drawable/color_change"/>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:background="@drawable/edge">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="        위치 추가하기"
-                            android:textStyle="bold"
-                            android:textColor="@color/secondary"/>
-
-                        <View
-                            android:layout_width="0dp"
-                            android:layout_height="0dp"
-                            android:layout_weight="1"/>
-
-                        <Button
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="+"
-                            android:textColor="@color/secondary"/>
-                    </LinearLayout>
-                </LinearLayout>
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -432,7 +381,58 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="LIST" />
+                        android:text="장소"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@drawable/edge">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                            <EditText
+                                android:id="@+id/txt_place"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="장소입력"
+                                android:textSize="14dp"
+                                android:textColor="@color/secondary"/>
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"/>
+
+                            <Button
+                                android:id="@+id/btn_place"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="+"
+                                android:textColor="@color/secondary"/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="LIST"
+                        android:textSize="14dp"/>
 
                     <LinearLayout
                         android:layout_width="match_parent"

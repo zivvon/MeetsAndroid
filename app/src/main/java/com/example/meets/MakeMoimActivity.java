@@ -60,9 +60,9 @@ public class MakeMoimActivity extends AppCompatActivity {
         tvGood1.setText(count1 + "");
         tvGood2.setText(count2 + "");
         tvGood3.setText(count3 + "");
-        btnGood1 = findViewById(R.id.tv_good1);
-        btnGood2 = findViewById(R.id.tv_good2);
-        btnGood3 = findViewById(R.id.tv_good3);
+        btnGood1 = findViewById(R.id.btn_good1);
+        btnGood2 = findViewById(R.id.btn_good2);
+        btnGood3 = findViewById(R.id.btn_good3);
 
         btnGood1.setOnClickListener(new View.OnClickListener() {
             @Override

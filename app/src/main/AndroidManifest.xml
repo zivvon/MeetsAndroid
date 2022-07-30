@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.meets">
 
     <application
@@ -21,6 +22,8 @@
         </activity>
         <activity android:name=".MakeMoimActivity"/>
         <activity android:name=".MoimActivity"/>
+        <activity android:name=".PlusMoimActivity"
+            tools:ignore="Instantiatable" />
 
     </application>
 
