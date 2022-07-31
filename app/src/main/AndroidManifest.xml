@@ -21,9 +21,9 @@
         <activity android:name=".MainActivity">
         </activity>
         <activity android:name=".MakeMoimActivity"/>
+        <activity android:name=".PlusMoimActivity"/>
         <activity android:name=".MoimActivity"/>
-        <activity android:name=".PlusMoimActivity"
-            tools:ignore="Instantiatable" />
+
 
     </application>
 

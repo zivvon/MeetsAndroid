@@ -69,7 +69,7 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <FrameLayout
+        <LinearLayout
             android:id="@+id/before"
             android:layout_width="match_parent"
             android:layout_height="120dp"
@@ -101,7 +101,7 @@
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_weight="1" />
-        </FrameLayout>
+        </LinearLayout>
 
         <LinearLayout
             android:id="@+id/after"
@@ -203,7 +203,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp">
             <Button
-                android:id="@+id/btn_makemoim"
+                android:id="@+id/btn_plusmoim"
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
                 android:background="@color/primary"

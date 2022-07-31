@@ -62,19 +62,21 @@ public class MoimActivity extends AppCompatActivity implements AdapterView.OnIte
                 textView.setText(edittext.getText());
             }
         });
-        Button btn_makemoin = (Button) findViewById(R.id.btn_makemoim);
-        btn_makemoin.setOnClickListener(new View.OnClickListener() {
+
+        Button btn_plusmoin = findViewById(R.id.btn_plusmoim);
+
+        btn_plusmoin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), MakeMoimActivity.class);
+                Intent intent = new Intent(getApplicationContext(), PlusMoimActivity.class);
                 startActivity(intent);
             }
         });
     }
 
     public void InitializeView() {
-        layout_before = findViewById(R.id.before);
-        layout_after = findViewById(R.id.after);
+        layout_before = (LinearLayout)findViewById(R.id.before);
+        layout_after = (LinearLayout)findViewById(R.id.after);
     }
 
     @Override
@@ -90,10 +92,10 @@ public class MoimActivity extends AppCompatActivity implements AdapterView.OnIte
 
     @Override
     public void onClick(View view) {
-        layout_before.setVisibility(view.VISIBLE);
-        layout_after.setVisibility(view.INVISIBLE);
+        layout_before.setVisibility(View.VISIBLE);
+        layout_after.setVisibility(View.INVISIBLE);
 
         if (view.getId() == R.id.btn_makeafter)
-            layout_after.setVisibility(view.VISIBLE);
+            layout_after.setVisibility(View.VISIBLE);
     }
 }

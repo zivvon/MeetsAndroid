@@ -31,7 +31,6 @@ public class MakeMoimActivity extends AppCompatActivity {
     private int count2 = 0;
     private int count3 = 0;
 
-    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
