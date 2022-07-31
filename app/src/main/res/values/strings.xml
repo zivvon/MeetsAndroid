@@ -2,4 +2,34 @@
     <string name="app_name">Meets</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="back"><![CDATA[<]]></string>
+    <string name="front"><![CDATA[>]]></string>
+
+    <string-array name="teamList">
+        <item>아이템1</item>
+        <item>아이템2</item>
+        <item>아이템3</item>
+        <item>아이템4</item>
+    </string-array>
+
+    <string-array name="memberList">
+        <item>멤버수</item>
+        <item>멤버1</item>
+        <item>멤버2</item>
+        <item>멤버3</item>
+        <item>멤버4</item>
+    </string-array>
+
+    <string-array name="schedule">
+        <item>보기 ∨</item>
+        <item>전체</item>
+        <item>현재 진행일정</item>
+        <item>종료된 일정</item>
+    </string-array>
+
+    <string-array name="make">
+        <item>:</item>
+        <item>편집</item>
+        <item>삭제</item>
+    </string-array>
 </resources>
