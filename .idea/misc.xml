@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Lee/AndroidStudioProjects/MeetsAndroid/app/src/main/res/drawable/buttom_shape.xml" value="0.116" />
+        <entry key="..\:/Users/Lee/AndroidStudioProjects/MeetsAndroid/app/src/main/res/drawable/button_circle.xml" value="0.1465" />
+        <entry key="..\:/Users/Lee/AndroidStudioProjects/MeetsAndroid/app/src/main/res/drawable/button_shape2.xml" value="0.116" />
+        <entry key="..\:/Users/Lee/AndroidStudioProjects/MeetsAndroid/app/src/main/res/drawable/color_change.xml" value="0.116" />
+        <entry key="..\:/Users/Lee/AndroidStudioProjects/MeetsAndroid/app/src/main/res/drawable/edge.xml" value="0.1465" />
+        <entry key="..\:/Users/Lee/AndroidStudioProjects/MeetsAndroid/app/src/main/res/drawable/splash.xml" value="0.1455" />
+        <entry key="..\:/Users/Lee/AndroidStudioProjects/MeetsAndroid/app/src/main/res/layout/activity_main.xml" value="0.25769927536231885" />
+        <entry key="..\:/Users/Lee/AndroidStudioProjects/MeetsAndroid/app/src/main/res/layout/activity_makemoim.xml" value="0.25" />
+        <entry key="..\:/Users/Lee/AndroidStudioProjects/MeetsAndroid/app/src/main/res/layout/activity_moim.xml" value="0.25" />
+        <entry key="..\:/Users/Lee/AndroidStudioProjects/MeetsAndroid/app/src/main/res/layout/activity_plusmoim.xml" value="0.2980072463768116" />
+        <entry key="..\:/Users/Lee/AndroidStudioProjects/MeetsAndroid/app/src/main/res/layout/calendar_cell.xml" value="0.2708333333333333" />
+        <entry key="..\:/Users/Lee/AndroidStudioProjects/MeetsAndroid/app/src/main/res/layout/fragment_calendar.xml" value="0.25" />
+        <entry key="..\:/Users/Lee/AndroidStudioProjects/MeetsAndroid/app/src/main/res/layout/fragment_home.xml" value="0.16822916666666668" />
+        <entry key="..\:/Users/Lee/AndroidStudioProjects/MeetsAndroid/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1045" />
+      </map>
+    </option>
+  </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
