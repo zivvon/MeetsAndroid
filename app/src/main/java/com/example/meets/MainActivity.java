@@ -75,7 +75,9 @@ public class MainActivity extends AppCompatActivity {
         // 버튼: 커스텀 다이얼로그 띄우기
         findViewById(R.id.login_btn).setOnClickListener(new View.OnClickListener() {
             public void onClick(View view){
-                showLoginDialog();
+                //showLoginDialog();
+                Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -153,14 +155,6 @@ public class MainActivity extends AppCompatActivity {
         closeBtn.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view){
                 login_dialog.dismiss();
-            }
-        });
-
-        Button yesBtn = login_dialog.findViewById(R.id.yesBtn);
-        yesBtn.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View view){
-                //원하는 기능 구현
-                finish(); //어플 종료
             }
         });
     }

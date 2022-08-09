@@ -47,6 +47,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <Button
+                    android:id="@+id/googleLoginBtn2"
                     android:layout_width="wrap_content"
                     android:layout_height="32dp"
                     android:paddingLeft="10dp"
@@ -133,6 +134,7 @@
                 android:text="기타" />
 
             <TextView
+                android:id="@+id/googleLogoutBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
