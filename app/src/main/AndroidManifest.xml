@@ -31,8 +31,8 @@
         <activity android:name=".MakeMoimActivity"></activity>
         <activity android:name=".MakeMoimFormActivity"></activity>
         <activity android:name=".PlusMoimActivity"></activity>
-        <activity android:name=".SelectMoimScheduleActivity"></activity>
         <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".MoimScheduleActivity" />
 
 
     </application>

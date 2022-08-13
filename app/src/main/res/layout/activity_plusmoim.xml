@@ -222,25 +222,26 @@
                     android:layout_height="0dp"
                     android:layout_weight="1"/>
 
-                <Button
-                    android:layout_width="55dp"
-                    android:layout_height="18dp"
-                    android:text="고정"
-                    android:textSize="14dp"
-                    android:background="@color/secondary"
-                    android:textColor="@color/black"/>
+<!--                <Button-->
+<!--                    android:layout_width="55dp"-->
+<!--                    android:layout_height="18dp"-->
+<!--                    android:text="고정"-->
+<!--                    android:textSize="14dp"-->
+<!--                    android:background="@color/secondary"-->
+<!--                    android:textColor="@color/black"/>-->
 
-                <Button
-                    android:layout_width="55dp"
-                    android:layout_height="18dp"
-                    android:text="조율"
-                    android:textSize="14dp"
-                    android:background="@color/white"
-                    android:textColor="@color/black"/>
+<!--                <Button-->
+<!--                    android:layout_width="55dp"-->
+<!--                    android:layout_height="18dp"-->
+<!--                    android:text="조율"-->
+<!--                    android:textSize="14dp"-->
+<!--                    android:background="@color/white"-->
+<!--                    android:textColor="@color/black"/>-->
 
             </LinearLayout>
 
             <LinearLayout
+                android:background="@drawable/border_color"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
@@ -258,40 +259,48 @@
                         android:orientation="horizontal"
                         android:paddingBottom="7dp">
 
-                        <ImageButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>
+                        <ImageView
+                            android:layout_width="20sp"
+                            android:layout_height="20sp"
+                            android:layout_margin="5sp"
+                            android:background="@drawable/mini_cal"
+                            android:padding="10sp" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="날짜"
+                            android:layout_marginTop="5sp"
+                            android:text="날짜 설정"
                             android:textSize="16dp"
                             android:textColor="@color/white"/>
                     </LinearLayout>
 
                     <LinearLayout
+                        android:layout_gravity="center"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:paddingBottom="7dp">
 
-                        <View
-                            android:layout_width="0dp"
-                            android:layout_height="0dp"
-                            android:layout_weight="1" />
-
                         <Button
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="오늘날짜"
+                            android:id="@+id/date_fix_btn"
+                            android:layout_gravity="center"
+                            android:layout_width="45sp"
+                            android:layout_height="35sp"
+                            android:layout_margin="5sp"
+                            android:text="고정"
                             android:textColor="@color/black"
                             android:background="@color/white" />
 
-                        <View
-                            android:layout_width="0dp"
-                            android:layout_height="0dp"
-                            android:layout_weight="1" />
+                        <Button
+                            android:id="@+id/date_arr_btn"
+                            android:layout_gravity="center"
+                            android:layout_width="45sp"
+                            android:layout_height="35sp"
+                            android:layout_margin="5sp"
+                            android:text="조율"
+                            android:textColor="@color/black"
+                            android:background="@color/white" />
 
                     </LinearLayout>
                 </LinearLayout>

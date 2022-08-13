@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/popup"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MoimScheduleActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        android:layout_marginBottom="10sp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="33dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="130sp"
+            android:layout_marginRight="50sp"
+            android:background="@drawable/bg_switch"
+            android:padding="2.5sp">
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchOnOff"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:checked="true"
+                android:textColor="@color/white"
+                android:thumb="@drawable/thumb_selector"
+                app:switchMinWidth="140dp"
+                app:track="@drawable/track_selector" />
+
+            <LinearLayout
+                android:layout_width="140dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/tvSwitchYes"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Dates"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tvSwitchNo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Weeks"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/closeBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:padding="2.5dp"
+            android:text="x"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/date_picker_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <CalendarView
+                android:id="@+id/calendarView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusedMonthDateColor="#3ffa7f"
+                android:unfocusedMonthDateColor="#fafafa"
+                android:layout_gravity="center" />
+
+            <TextView
+                android:id="@+id/textview"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="날짜 선택 test" />
+
+            <LinearLayout
+                android:background="#F5F5F5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- 시작시간 -->
+                <LinearLayout
+                    android:layout_margin="20sp"
+                    android:background="#F5F5F5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="시작" />
+
+                    <EditText
+                        android:id="@+id/startTimeTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="12dp"
+                        android:hint="시작시간을 설정해주세요 ▼" />
+
+                </LinearLayout>
+
+                <!-- 끝시간 -->
+                <LinearLayout
+                    android:layout_margin="20sp"
+                    android:background="#F5F5F5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="끝" />
+
+                    <EditText
+                        android:id="@+id/endTimeTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="12dp"
+                        android:hint="종료시간을 설정해주세요 ▼" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/submit_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="9sp"
+                android:background="@drawable/border_color"
+                android:text="완료" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
