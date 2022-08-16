@@ -19,3 +19,6 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+#밋츠 클라이언트 아이디 : 458678862658-h8cqgfgcj06vr1bubacjpheh4ca3uvgb.apps.googleusercontent.com
+#밋츠 클라이언트 시크릿 : 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

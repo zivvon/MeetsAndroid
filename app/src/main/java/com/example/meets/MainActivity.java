@@ -13,6 +13,7 @@ import android.graphics.Point;
 import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.Display;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -41,6 +42,8 @@ public class MainActivity extends AppCompatActivity {
 
     ImageView imageview;
     TextView textview;
+
+    TextView username;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -91,6 +94,18 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        //로그인 후 유저 정보 받아오기
+        Intent intent = getIntent(); //전달할 데이터를 받을 Intent
+        String userName = intent.getStringExtra("userName");
+
+        username = findViewById(R.id.userName);
+
+        if(TextUtils.isEmpty(userName)){
+            username.setText("로그인");
+        }else{
+            username.setText(userName + "님");
+        }
     }
 
     @Override

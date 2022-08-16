@@ -9,6 +9,7 @@
     tools:context=".MoimScheduleActivity">
 
     <LinearLayout
+        android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10sp"
@@ -18,18 +19,15 @@
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="33dp"
-            android:layout_gravity="center"
-            android:layout_marginLeft="130sp"
-            android:layout_marginRight="50sp"
+            android:gravity="center"
             android:background="@drawable/bg_switch"
             android:padding="2.5sp">
 
             <androidx.appcompat.widget.SwitchCompat
+                android:layout_gravity="center"
                 android:id="@+id/switchOnOff"
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
-                android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"
                 android:checked="true"
                 android:textColor="@color/white"
                 android:thumb="@drawable/thumb_selector"
@@ -70,9 +68,8 @@
 
         <Button
             android:id="@+id/closeBtn"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="right"
             android:padding="2.5dp"
             android:text="x"
             android:textSize="20sp" />
@@ -89,20 +86,13 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <CalendarView
+            <com.prolificinteractive.materialcalendarview.MaterialCalendarView
                 android:id="@+id/calendarView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:focusedMonthDateColor="#3ffa7f"
-                android:unfocusedMonthDateColor="#fafafa"
-                android:layout_gravity="center" />
-
-            <TextView
-                android:id="@+id/textview"
-                android:gravity="center"
+                android:layout_margin="20sp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="날짜 선택 test" />
+                app:mcv_selectionColor="@color/primary"
+                app:mcv_selectionMode="range" />
 
             <LinearLayout
                 android:background="#F5F5F5"

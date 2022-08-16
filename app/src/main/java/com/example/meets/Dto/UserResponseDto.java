@@ -55,10 +55,10 @@ public class UserResponseDto {
     @Override
     public String toString() {
         return "UserResponseDto{" +
-                "email=" + email +
+                "userNo=" + userNo +
+                ", email='" + email + '\'' +
                 ", name='" + name + '\'' +
                 ", profileUrl='" + profileUrl + '\'' +
-                ", userNo='" + userNo + '\'' +
                 '}';
     }
 }

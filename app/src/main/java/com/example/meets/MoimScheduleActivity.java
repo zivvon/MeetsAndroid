@@ -16,14 +16,19 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SwitchCompat;
 import androidx.core.content.ContextCompat;
 
+import com.prolificinteractive.materialcalendarview.CalendarDay;
+import com.prolificinteractive.materialcalendarview.CalendarMode;
+import com.prolificinteractive.materialcalendarview.MaterialCalendarView;
+
+import org.threeten.bp.LocalDate;
+
 public class MoimScheduleActivity extends AppCompatActivity {
 
     SwitchCompat switchOnOff;
     TextView tvSwitchYes;
     TextView tvSwitchNo;
 
-    CalendarView calendarView;
-    TextView textview;
+    private MaterialCalendarView calendarView;
 
     EditText startTimeTv;
     EditText endTimeTv;
@@ -54,20 +59,19 @@ public class MoimScheduleActivity extends AppCompatActivity {
             }
         });
 
-        calendarView = (CalendarView) findViewById(R.id.calendarView);
-        textview = findViewById(R.id.textview);
+        calendarView = findViewById(R.id.calendarView);
 
-        calendarView.setMinDate(System.currentTimeMillis());
-        calendarView.setMaxDate(System.currentTimeMillis() + (24 * 60 * 60 * 1000) * 14);
-
-        calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
-            @Override
-            public void onSelectedDayChange(@NonNull CalendarView calendarView, int year, int month, int dayOfMonth) {
-                // todo
-                month += 1;
-                textview.setText(String.format("%d년 %d월 %d일", year, month, dayOfMonth));
-            }
-        });
+//        calendarView.setMinDate(System.currentTimeMillis());
+//        calendarView.setMaxDate(System.currentTimeMillis() + (24 * 60 * 60 * 1000) * 14);
+//
+//        calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
+//            @Override
+//            public void onSelectedDayChange(@NonNull CalendarView calendarView, int year, int month, int dayOfMonth) {
+//                // todo
+//                month += 1;
+//                textview.setText(String.format("%d년 %d월 %d일", year, month, dayOfMonth));
+//            }
+//        });
 
         endTimeTv = findViewById(R.id.endTimeTv);
         startTimeTv = findViewById(R.id.startTimeTv);
