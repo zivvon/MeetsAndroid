@@ -34,6 +34,7 @@
         <activity android:name=".PlusMoimActivity"></activity>
         <activity android:name=".LoginActivity"></activity>
         <activity android:name=".MoimScheduleActivity" />
+        <activity android:name=".ScheduleActivity" />
 
 
     </application>
