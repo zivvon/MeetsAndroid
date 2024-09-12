@@ -7,14 +7,9 @@
         android:title="홈"/>
 
     <item
-        android:id="@+id/tab_loading"
-        android:enabled="true"
-        android:icon="@drawable/loading"
-        android:title="개발중"/>
-
-    <item
         android:id="@+id/tab_calendar"
         android:enabled="true"
         android:icon="@drawable/calendar"
         android:title="캘린더"/>
+
 </menu>

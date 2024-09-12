@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_custom_calendar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MakeMoimFormActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <!--헤더-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#C6BDFF"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/pre_page_btn"
+                android:onClick="moveBack"
+                android:layout_weight="1"
+                android:layout_width="24sp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:drawableTop="@drawable/pre_page_btn" />
+
+            <TextView
+                android:layout_weight="2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:text="모임 만들기"
+                android:textStyle="bold"
+                android:textColor="#ffffff"
+                android:textSize="22sp" />
+
+            <Button
+                android:id="@+id/make_moim_btn"
+                android:layout_weight="1"
+                android:layout_width="24sp"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="#ffffff"
+                android:text="완료" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:scaleType="centerCrop"
+                android:layout_marginTop="90sp"
+                android:onClick="selectImg"
+                android:id="@+id/moim_pic"
+                android:background="@drawable/add_photo"
+                android:layout_width="256sp"
+                android:layout_height="198dp"
+                android:layout_gravity="center"/>
+
+            <EditText
+                android:id="@+id/moim_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:hint="모임 이름 입력"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="모임 이름과 사진은 개설 후에도 변경할 수 있어요."
+                android:textSize="13sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="30sp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="32sp"
+                    android:layout_height="32sp"
+                    android:layout_margin="12sp"
+                    android:background="@drawable/yellow_btn" />
+
+                <Button
+                    android:layout_width="32sp"
+                    android:layout_height="32sp"
+                    android:layout_margin="12sp"
+                    android:background="@drawable/orange_btn" />
+
+                <Button
+                    android:layout_width="32sp"
+                    android:layout_height="32sp"
+                    android:layout_margin="12sp"
+                    android:background="@drawable/green_btn" />
+
+                <Button
+                    android:layout_width="32sp"
+                    android:layout_height="32sp"
+                    android:layout_margin="12sp"
+                    android:background="@drawable/pink_btn" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <!--하단 메뉴탭 고정-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/homeBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/home"
+            android:onClick="moveHome"
+            android:text="홈"
+            android:textColor="#BBBBBB"
+            android:textSize="10dp" />
+
+        <Button
+            android:id="@+id/calBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/calendar_logo"
+            android:onClick="moveCal"
+            android:text="캘린더"
+            android:textColor="#BBBBBB"
+            android:textSize="10dp" />
+
+        <Button
+            android:id="@+id/myBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/mypage"
+            android:onClick="moveMypg"
+            android:text="MY"
+            android:textColor="#BBBBBB"
+            android:textSize="10dp" />
+
+    </LinearLayout>
+
+</LinearLayout>
